@@ -1,0 +1,46 @@
+mkdir -p $PREFIX/var/lib/postgresql initdb $PREFIX/var/lib/postgresql 
+
+Starting the database
+
+pg_ctl -D $PREFIX/var/lib/postgresql start 
+
+Similarly stop the database using
+
+pg_ctl -D $PREFIX/var/lib/postgresql stop 
+
+Create User
+
+$ createuser --superuser --pwprompt yourUserName 
+
+Create your database:
+
+$ createdb mydb 
+
+Open your database
+
+$ psql mydb
+
+
+
+
+
+
+14.March
+
+SELECT * FROM info WHERE id=100 and (gender ="male" ot gender ="female")
+
+SELECT * FROM info ORDER BY id ASC,DASC
+
+
+SELECT DISTINCT gender from info where gender like "___e";
+
+alike is for case
+
+
+
+SELECT * FROM info LIMIT 100;
+
+SELECT * FROM info WHERE id BETWEEN 10 and 21;
+SELECT * FROM info WHERE id >10 and id<21 ;
+SELECT * FROM INFO OFFSET 10 LIMIT 10;
+SELECT * FROM info OFFSET 10 FETCH FIRST 10 ROW ONLY;
